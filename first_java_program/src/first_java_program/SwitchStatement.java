@@ -4,6 +4,7 @@ public class SwitchStatement {
 
 	public static void main(String[] args) {
 	
+		//java 1.6 switch
 		int step = 1;
 		
 		switch(step) {
@@ -53,8 +54,61 @@ public class SwitchStatement {
 			
 		}
 		
-	//라면 끓이기 절차 출력
+		// java 13 switch
+		// Switch 를 이용해서 변수에 값을 할당한다.
+		// 회원가입을 할 때, 사용자가 등록할 수 없는 아이디 목록. (black list);
+		// 관리자들이 사용하는 아이디 -> admin, root, superuser, admiistrator
+		// 운영자들이 사용하는 아이디
+		// master, operator, system, sysopr
+		
+//		String memberId = "admin";
+		String memberId = "operator";
+//		String memberId = "sysopr";
+		
+		String membeGradeString = switch(memberId) {
+			case "admin": 
+			case "root": 
+			case "superuser":
+				yield "관리자";
+			case "master":
+			case "operator":
+			case "system":
+			case "sysopr":
+				yield "운영자";
+			default:
+				yield "일반사용자";
+		};
+
+		System.out.println(memberId + "는 " + membeGradeString + "입니다.");
+		
 		
 
+		
+		// 자바 14
+		String memberId2 = "superuser";
+		
+		String membeGradeString2 = switch(memberId2) {
+			case "admin", "root", "superuser", "administrator": 
+				yield "관리자";
+			case "master","operator", "system","sysopr":
+				yield "운영자";
+			default:
+				yield "일반사용자";
+		};
+
+		System.out.println(memberId2 + "는 " + membeGradeString2 + "입니다.");
+
+		
+		
+		// yield 간소화 -> 배열, 자료구조를 한줄로 표현 가능.
+		String memberId3 = "sysopr";
+		
+		String membeGradeString3 = switch(memberId3) {
+			case "admin", "root", "superuser", "administrator" -> "관리자";
+			case "master","operator", "system","sysopr" -> "운영자";
+			default -> "일반사용자";
+		};
+
+		System.out.println(memberId3 + "는 " + membeGradeString3 + "입니다.");
 	}
 }
