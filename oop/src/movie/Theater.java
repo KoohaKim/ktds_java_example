@@ -68,6 +68,7 @@ public class Theater {
 		}
 	}
 	
+	
 	public void turnOnAirConditioner() {
 		if(!airConditioner.isOn) {
 			airConditioner.isOn = true;
@@ -78,6 +79,68 @@ public class Theater {
 			
 			boolean isNowWinter = airConditioner.currentTemperature < airConditioner.targetTemperature;
 			airConditioner.heatingAndCoolingStatus = !isNowWinter;
+		}
+	}
+	
+
+	public void changeLightStatus() {
+		if (!light.isOn) {
+			light.isOn = true;
+			light.color = null;
+		}else if (light.isOn) {
+			light.isOn = false;
+			light.color = getRandomNumAndReturnColor();
+		}
+	}
+	private String getRandomNumAndReturnColor() {
+		int randomNum = (int) (Math.random() * 3);
+		
+		String result = switch(randomNum) {
+		case 0 -> "red";
+		case 1 -> "blue";
+		case 2 -> "green";
+		default -> "존재하지 않는 색";
+		};
+		
+		return result;
+	}
+	
+	
+	
+	
+	public void changeVolume(int volume) {
+		if(!speaker.isOn) {
+			speaker.isOn = true;
+		}else if(speaker.isOn) {
+			speaker.isOn = false;
+			speaker.volume += validateVolume(volume);
+		}
+	}
+	
+	private int validateVolume(int volume) {
+		final int maxNum = 100;
+		final int minNum = 0;
+		
+		if (volume > maxNum) {
+			return 100;
+		} else if (volume < minNum) {
+			return 0;
+		}
+		return volume;
+	}
+	
+	
+	
+	
+	
+	
+	public void adjustSeat() {
+		if (!seat.isFold) {
+			seat.isFold = true;
+			System.out.println(seat.seatNumber + "가 접혔습니다.");
+		}else if (seat.isFold) {
+			seat.isFold = false;
+			System.out.println(seat.seatNumber + "가 펼쳐 졌습니다.");
 		}
 	}
 	
