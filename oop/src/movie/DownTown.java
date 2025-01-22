@@ -12,22 +12,22 @@ public class DownTown {
 		name += "";
 //		name = "김";
 		System.out.println(name+ ", " + System.identityHashCode(name));
-	}
+	}	
 	
 	
-	public static void setMovieTitle(Movie movie) {
-		movie.title = "파묘";
-		System.out.println(movie.title + ", " + System.identityHashCode(movie));
-	}
+//	public static void setMovieTitle(Movie movie) {
+//		movie.title = "파묘";
+//		System.out.println(movie.title + ", " + System.identityHashCode(movie));
+//	}
 	
 	
 	
 	public static void main(String[] args) {
-		int number = 10;
-		System.out.println(number); // 1. 10  
-		
-//		addNumber(number);	// 2. 20
-		System.out.println(number); //3. 10
+//		int number = 10;
+//		System.out.println(number); // 1. 10  
+//		
+////		addNumber(number);	// 2. 20
+//		System.out.println(number); //3. 10
 		
 		
 		String name = "김";
@@ -37,10 +37,10 @@ public class DownTown {
 
 		
 		
-		Movie 파묘 = new Movie();
-		System.out.println(파묘.title + ", " + System.identityHashCode(파묘));	// 1. null -> 메모리가 할당됐는가? ㅇㅇ됨 new 함, null, 1826771953
-		setMovieTitle(파묘);														// 2. 파묘 -> 파묘, 1826771953
-		System.out.println(파묘.title + ", " + System.identityHashCode(파묘)); // 3. 파묘 -> 주소 값이 바뀌지 않았다. 파묘, 1826771953
+//		Movie 파묘 = new Movie();
+//		System.out.println(파묘.title + ", " + System.identityHashCode(파묘));	// 1. null -> 메모리가 할당됐는가? ㅇㅇ됨 new 함, null, 1826771953
+//		setMovieTitle(파묘);														// 2. 파묘 -> 파묘, 1826771953
+//		System.out.println(파묘.title + ", " + System.identityHashCode(파묘)); // 3. 파묘 -> 주소 값이 바뀌지 않았다. 파묘, 1826771953
 		
 		
 		
@@ -76,8 +76,8 @@ public class DownTown {
 		cgv.setRandomVolume();
 		
 		
-		System.out.println(cgv.speaker.volume);
-		System.out.println("--------------------------------------------------------------------");
+//		System.out.println(cgv.speaker.volume);
+//		System.out.println("--------------------------------------------------------------------");
 		
 		
 	}
