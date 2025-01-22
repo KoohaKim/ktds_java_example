@@ -8,9 +8,8 @@ public class MethodStatement {
 		int numberLength = getNumberLength(QUIZ_NUM);
 		int value = loopQuizNum(QUIZ_NUM, numberLength);
 		
-		printValue(QUIZ_NUM, value);
+		printQuiz(QUIZ_NUM, value);
 	}
-	
 	
 	
 	private static final int getNumberLength(int a) {
@@ -18,24 +17,22 @@ public class MethodStatement {
 		
 		return value;
 	}
-	
-	// 
  
 	
-	
-	private static final int loopQuizNum(int num, int numberLength) {
-		 int value = 0;
+	private static final int loopQuizNum(int quiznum, int numberLength) {
+		int value = 0;
 		 
-		for (int i = 1; i <= numberLength; i++) {
-			value += num % 10;
-			num /= 10;
+		
+		for (int i = 0; i < numberLength; i++) {
+			value += quiznum % 10;
+			quiznum /= 10;
 		}
 		
 		return value;
 	}
 	
 	
-	private static final void printValue(int quiz, int value) {
+	private static final void printQuiz(int quiz, int value) {
 		System.out.println("입력 값 " + quiz + "의 자릿 수는 " + value + "입니다.");
 		System.out.println(quiz + "의 합은 " + value + " 입니다.");
 

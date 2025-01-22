@@ -19,7 +19,6 @@ public class Homework3 {
 		
 		System.out.println("섭씨온도 " + celsius +"도는 화씨온도로 " + fahrenheit + "도 입니다.");
 		
-		
 	}
 
 }
