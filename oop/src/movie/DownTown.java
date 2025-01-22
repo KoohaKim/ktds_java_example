@@ -30,10 +30,10 @@ public class DownTown {
 //		System.out.println(number); //3. 10
 		
 		
-		String name = "김";
-		System.out.println(name + ", " + System.identityHashCode(name)); // 김, 681842940
-		appendName(name);												  // 김구하, 135721597
-		System.out.println(name + ", " + System.identityHashCode(name)); // 김, 681842940
+//		String name = "김";
+//		System.out.println(name + ", " + System.identityHashCode(name)); // 김, 681842940
+//		appendName(name);												  // 김구하, 135721597
+//		System.out.println(name + ", " + System.identityHashCode(name)); // 김, 681842940
 
 		
 		
@@ -55,7 +55,7 @@ public class DownTown {
 		
 		Seat seat = new Seat();
 		seat.seatNumber = "H1";
-		
+
 		Projector projector = new Projector();
 		AirConditioner airConditioner = new AirConditioner();
 		airConditioner.currentTemperature = 24.5F;
@@ -73,12 +73,21 @@ public class DownTown {
 		cgv.speaker = harman;
 		
 		
-		cgv.setRandomVolume();
+		cgv.playMovie();
+		cgv.playMovie();
+		
+		cgv.turnOnAirConditioner();
+		cgv.turnOnAirConditioner();
+
+		cgv.toggleLight();
+		cgv.toggleLight();
 		
 		
-//		System.out.println(cgv.speaker.volume);
-//		System.out.println("--------------------------------------------------------------------");
+		cgv.adjustVolume(5);
+		cgv.adjustVolume(-10);
+		System.out.println(cgv.speaker.volume);
 		
-		
+		cgv.toggleSeat();
+		cgv.toggleSeat();
 	}
 }

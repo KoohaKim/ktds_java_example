@@ -37,7 +37,7 @@ public class Theater {
 			projector.isPlay = true;	
 		}
 		
-		
+//
 		if(projector.isPlay) {
 			System.out.println(movie.title + "을" + movie.runningTime + "분 동안 재생합니다.");
 			
