@@ -1,24 +1,12 @@
 package cafe;
 
-/*
- * only ice and hot americano
- * 
- * 클래스를 작성하는 순서
- * 멤버변수, 생성자, 메소드 -> 어떤 순서로 작성되어야 하는가?
- * 
- * 1. 상수
- * 2. 멤버 변수
- * 3. 생성자
- * 4. 메소드
- * 
- */
 public class CoffeeShop {
-	int iceAmericano;
-	int hotAmericano;
+	Coffee iceAmericano;	//class가 class를 가지고 있는 것 => has a (reference가 refernceType을 가질 때)
+	Coffee hotAmericano;
 	
 	
 	// 생성자 = 메소드, 생성자는 반환타입 x, 생성자 메소드의 이름은 클래스와 완전히 동일 해야한다.
-	public CoffeeShop(int iceAmericano, int hotAmericano) {
+	public CoffeeShop(Coffee iceAmericano, Coffee hotAmericano) {
 		System.out.println("커피숍 인스턴스를 만들었습니다.");
 		this.iceAmericano = iceAmericano;
 		this.hotAmericano = hotAmericano;
@@ -32,9 +20,14 @@ public class CoffeeShop {
 	 */
 	public int orderCoffee(int menu, int quantity) {
 		if(menu == 1) {
-			return quantity * this.iceAmericano;
+			System.out.println("상품 이름: " + this.iceAmericano.nameString);
+			System.out.println("가격: " + this.iceAmericano.price * quantity);
+			return quantity * this.iceAmericano.price;
 		} else if (menu == 2) {
-			return quantity * this.hotAmericano;
+			System.out.println("상품 이름: " + this.hotAmericano.nameString);
+			System.out.println("가격: " + this.hotAmericano.price * quantity);
+
+			return quantity * this.hotAmericano.price;
 		} 
 		
 		// 판매하지 않는 커피 주문 시 결제 금액 0 

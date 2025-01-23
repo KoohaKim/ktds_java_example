@@ -9,6 +9,6 @@ public class Coffee {
 		this.nameString = nameString;
 		this.price = price;
 	}
-	
+		
 	
 }
