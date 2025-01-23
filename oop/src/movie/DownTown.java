@@ -89,5 +89,7 @@ public class DownTown {
 		
 		cgv.toggleSeat();
 		cgv.toggleSeat();
+		
+		하얼빈.printMovieInfo();
 	}
 }

@@ -12,10 +12,8 @@ public class Arcade {
 		craneGameMachine.insertCoin();	
 		craneGameMachine.doGame();
 		
-		System.out.println("남은 인형: " + craneGameMachine.dolls);
-		
-		
-		
+		System.out.println("남은 인형: " + craneGameMachine.dolls);		
+			
 		
 	}
 }

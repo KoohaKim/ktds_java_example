@@ -6,7 +6,10 @@ public class Movie {
 	 int runningTime;
 	
 
-
+	 public void printMovieInfo() {
+		System.out.println("Movie title: " + this.title);
+		System.out.println("Movie runningTime: " + this.runningTime);
+	}
 	
 	
 	
