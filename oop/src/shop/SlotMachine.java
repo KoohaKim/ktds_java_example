@@ -1,7 +1,5 @@
 package shop;
 
-import java.awt.geom.QuadCurve2D;
-
 public class SlotMachine {
 	Beverage 박카스;
 	Beverage 몬스터;

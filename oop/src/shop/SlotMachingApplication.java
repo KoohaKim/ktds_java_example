@@ -14,7 +14,5 @@ public class SlotMachingApplication {
 //		slotMachine.orderBeverage("박카스", 1);
 //		
 //		slotMachine.printBeverageStock();
-		
-		
 	}
 }
