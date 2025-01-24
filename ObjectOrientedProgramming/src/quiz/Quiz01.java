@@ -1,4 +1,4 @@
-package homework;
+package quiz;
 
 /*
 손님이 영화관에 10000원을 가지고 입장했습니다.

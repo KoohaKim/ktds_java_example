@@ -1,4 +1,4 @@
-package homework;
+package quiz;
 /*
  * 1 부터 10000 사이에 몇 개의 소수(Prime Number)가 있는지 세어 출력하는
 메소드를 만들고 호출해보세요.

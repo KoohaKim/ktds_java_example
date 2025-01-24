@@ -1,4 +1,4 @@
-package homework;
+package quiz;
 
 /*
  * 정수형 변수 4개를 선언하고 값을 할당한다.

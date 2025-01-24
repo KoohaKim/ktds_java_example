@@ -1,4 +1,4 @@
-package homework;
+package quiz;
 /*
  * 무한 구구단을 출력합니다.
 사용자가 입력한 구구단의 결과를 출력합니다.

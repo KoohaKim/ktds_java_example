@@ -6,3 +6,4 @@ first_java_program/.settings/
 *.prefs
 oop/.gitignore
 first_java_program/bin/.gitignore
+ObjectOrientedProgramming/.gitignore
