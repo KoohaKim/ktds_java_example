@@ -8,10 +8,10 @@ package homework;
 
 import java.util.Scanner;
 
-public class Quiz2 {
+public class Quiz02 {
 	int value;
 
-	public Quiz2(int value) {
+	public Quiz02(int value) {
 		this.value = value;
 	}
 
@@ -26,7 +26,7 @@ public class Quiz2 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 
-		Quiz2 quiz2 = new Quiz2(scanner.nextInt());
+		Quiz02 quiz2 = new Quiz02(scanner.nextInt());
 		quiz2.printTimeTable();
 
 		scanner.close();

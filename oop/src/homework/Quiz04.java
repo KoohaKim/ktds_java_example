@@ -3,11 +3,11 @@ package homework;
  * 1 부터 10000 사이에 몇 개의 소수(Prime Number)가 있는지 세어 출력하는
 메소드를 만들고 호출해보세요.
  */
-public class Quiz4 {
+public class Quiz04 {
 	int minNum;
 	int maxNum;
 	
-	public Quiz4(int minNum, int maxNum) {
+	public Quiz04(int minNum, int maxNum) {
 		this.minNum = checkMinNum(minNum);
 		this.maxNum = maxNum;
 	}
@@ -47,7 +47,7 @@ public class Quiz4 {
 	
 	
 	public static void main(String[] args) {
-		Quiz4 quiz4 = new Quiz4(1, 10_000);
+		Quiz04 quiz4 = new Quiz04(1, 10_000);
 		
 		System.out.println("소수는 총 " + quiz4.findPrimeNum() + "개 입니다.");
 	}

@@ -7,11 +7,11 @@ package homework;
 관람할 수 있다면, "관람가능"을 출력하고 지불하고 남은 금액을 출력합니다.
 관람할 수 없다면, "관람불가능"을 출력하고 모자란 금액을 출력합니다.
  */
-public class Quiz1 {
+public class Quiz01 {
 	int customerMoney;
 	int moviePrice;
 
-	public Quiz1(int customerMovie, int moviePrice) {
+	public Quiz01(int customerMovie, int moviePrice) {
 		this.customerMoney = customerMovie;
 		this.moviePrice = moviePrice;
 	}
@@ -26,7 +26,7 @@ public class Quiz1 {
 	
 	
 	public static void main(String[] args) {
-		Quiz1 quiz1 = new Quiz1(10000, 18000);
+		Quiz01 quiz1 = new Quiz01(10000, 18000);
 		
 		quiz1.canWatchMovie();
 		

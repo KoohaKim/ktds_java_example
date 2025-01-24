@@ -20,12 +20,12 @@ import java.util.Scanner;
 
 "exit" 문자열을 입력하면 반복이 종료되어 애플리케이션이 종료되어야 합니다.
  */
-public class Quiz3 {
+public class Quiz03 {
 	String value1; 
 	int value2;
 	int value3;
 		
-	public Quiz3(String value1, int value2, int value3) {
+	public Quiz03(String value1, int value2, int value3) {
 		this.value1 = value1;
 		this.value2 = value2;
 		this.value3 = value3;
@@ -60,7 +60,7 @@ public class Quiz3 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		
-		Quiz3 quiz3 = new Quiz3(scanner.next(), scanner.nextInt(),scanner.nextInt());
+		Quiz03 quiz3 = new Quiz03(scanner.next(), scanner.nextInt(),scanner.nextInt());
 		System.out.println(quiz3.calculator());
 		
 		scanner.close();

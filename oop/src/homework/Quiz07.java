@@ -7,14 +7,14 @@ package homework;
 
 
  */
-public class Quiz7 {
+public class Quiz07 {
 	int a;
 	int b;
 	int c;
 	int d;
 	
 	
-	public Quiz7(int a, int b, int c, int d) {
+	public Quiz07(int a, int b, int c, int d) {
 		this.a = a;
 		this.b = b;
 		this.c = c;
@@ -30,7 +30,7 @@ public class Quiz7 {
 	
 	
 	public static void main(String[] args) {
-		Quiz7 quiz7 = new Quiz7(1,2,3,4);
+		Quiz07 quiz7 = new Quiz07(1,2,3,4);
 		int result = quiz7.calculateSum();
 		
 		System.out.println(result);

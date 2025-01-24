@@ -7,11 +7,11 @@ package homework;
 
 
  */
-public class Quiz8 {
+public class Quiz08 {
 	int a;
 	int b;
 	
-	public Quiz8(int a, int b) {
+	public Quiz08(int a, int b) {
 		this.a = a;
 		this.b = b;
 	}
@@ -21,7 +21,7 @@ public class Quiz8 {
 	}
 	
 	public static void main(String[] args) {
-		Quiz8 quiz8 = new Quiz8(1, 2);
+		Quiz08 quiz8 = new Quiz08(1, 2);
 		int result = quiz8.calculateMultiply();
 		
 		System.out.println(result);
