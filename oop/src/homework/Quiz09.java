@@ -7,7 +7,7 @@ package homework;
  */
 public class Quiz09 {
 	int a;
-	int b;
+	int b;	
 	
 	public Quiz09(int a, int b) {
 		this.a = a;

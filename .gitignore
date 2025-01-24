@@ -5,3 +5,4 @@ first_java_program/.settings/
 *.class
 *.prefs
 oop/.gitignore
+first_java_program/bin/.gitignore
