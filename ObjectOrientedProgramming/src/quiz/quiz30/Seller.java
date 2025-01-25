@@ -11,7 +11,7 @@ public class Seller {
 		this.account = account;
 	}
 	
-	public String getProduct() {
+	public Product getProduct() {
 		return this.product;
 	}
 
@@ -29,10 +29,6 @@ public class Seller {
 
 
 	public void sellProduct(Customer customer, String orderQuantity) {
-		int price = 
-		
-		if (condition) {
-			
-		}
+
 	}
 }
