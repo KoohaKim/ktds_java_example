@@ -33,12 +33,14 @@ public class Quiz16 {
 	}
 
 	
-	private int printIfValid(int value) {
-		if (value % 2 == 0 && value % 5 == 0 && value % 8 == 0) {
+	private void printIfValid(int value) {
+		boolean isValid = value % 2 == 0;
+		isValid &= value % 5 == 0;
+		isValid &= value % 8 == 0;
+		
+		if (isValid) {
 			System.out.println(value);
-			return value;
 		}
-		return value;
 	}
 
 	

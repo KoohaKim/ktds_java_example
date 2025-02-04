@@ -34,7 +34,7 @@ package quiz.quiz30;
 판매자의 금고 현황: 100000원
  */
 public class Quiz30 {
-    public static void main(String[] args) {
+    public static void main(String[] args) {	
         Product doll = new Product("티니핑", new Quantity(100), 100_000);
         Product robot = new Product("건담", new Quantity(15), 50_000);
         Seller seller = new Seller(0);
@@ -48,5 +48,6 @@ public class Quiz30 {
         //일반 주문
         seller.sellProduct(rich, doll, new Quantity(5));
 //        seller.sellProduct(rich, robot, new Quantity(5));
+        
     }
 }

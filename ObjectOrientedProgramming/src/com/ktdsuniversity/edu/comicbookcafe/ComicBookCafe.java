@@ -1,8 +1,13 @@
 package com.ktdsuniversity.edu.comicbookcafe;
 
 public class ComicBookCafe {
-	private final int RENTAL_FEE = 10_000;
+	public static final int RENTAL_FEE;
 
+	static {
+		RENTAL_FEE = 100;
+	}
+	
+	
 	private int account;
 	private ComicBook comicBook1;
 	private ComicBook comicBook2;
