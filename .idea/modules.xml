@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ObjectOrientedProgramming/ObjectOrientedProgramming.iml" filepath="$PROJECT_DIR$/ObjectOrientedProgramming/ObjectOrientedProgramming.iml" />
-      <module fileurl="file://$PROJECT_DIR$/first_java_program/first_java_program.iml" filepath="$PROJECT_DIR$/first_java_program/first_java_program.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/ktds_java_example-master.iml" filepath="$PROJECT_DIR$/.idea/ktds_java_example-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ktds_java_example-master/0204Quiz/0204Quiz.iml" filepath="$PROJECT_DIR$/ktds_java_example-master/0204Quiz/0204Quiz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ktds_java_example-master/ObjectOrientedProgramming/ObjectOrientedProgramming.iml" filepath="$PROJECT_DIR$/ktds_java_example-master/ObjectOrientedProgramming/ObjectOrientedProgramming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ktds_java_example-master/first_java_program/first_java_program.iml" filepath="$PROJECT_DIR$/ktds_java_example-master/first_java_program/first_java_program.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ktds_java_example-master (1).iml" filepath="$PROJECT_DIR$/.idea/ktds_java_example-master (1).iml" />
     </modules>
   </component>
 </project>
