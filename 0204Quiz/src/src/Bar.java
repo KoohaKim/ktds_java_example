@@ -1,3 +1,5 @@
+package src;
+
 public class Bar {
 	private static final int CAN_BUY_ALCOHOL_MINIMUM_AGE = 19;
 	private static final int MAXIMUM_DRUNKEN_LEVEL = 10;

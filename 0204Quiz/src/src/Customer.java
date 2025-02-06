@@ -1,3 +1,5 @@
+package src;
+
 public class Customer {
 	private static final double ALCOHOL_INCREMENT = 0.5;
 	private static final double FULLNESS_INCREMENT = 0.2;
