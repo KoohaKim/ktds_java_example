@@ -1,3 +1,4 @@
+package quiz0207;
 
 public class ContactApp {
 	private int size; // contacts배열 에 들어간 연락처의 개수

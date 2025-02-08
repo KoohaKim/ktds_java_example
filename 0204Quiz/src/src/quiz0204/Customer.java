@@ -1,4 +1,4 @@
-package src;
+package quiz0204;
 
 public class Customer {
 	private static final double ALCOHOL_INCREMENT = 0.5;

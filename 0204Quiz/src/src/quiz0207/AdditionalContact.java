@@ -1,3 +1,4 @@
+package quiz0207;
 
 public class AdditionalContact {
 	private String dateOfBirth;
