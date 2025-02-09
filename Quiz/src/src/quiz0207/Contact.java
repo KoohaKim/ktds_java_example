@@ -1,24 +1,37 @@
 package quiz0207;
 
 public class Contact {
-	private int number;
+	private long id;
 	private String name;
-	private int phone;
-	private String photo;
+	private String phone;
+	private String photoUrl;
 	
-	public Contact(int number, String name, int phone, String photo) {
-		this.number = number;
+	public Contact(long id, String name, String phone, String photoUrl) {
+		this.id = id;
 		this.name = name;
 		this.phone = phone;
-		this.photo = photo;
+		this.photoUrl = photoUrl;
 	}
 
 	@Override
 	public String toString() {
-		return "number=" + number + ", name=" + name + 
-				", phone=" + phone + ", photo=" + photo;
+		return "id=" + id + ", name=" + name +
+				", phone=" + phone + ", photo=" + photoUrl;
 	}
-	
-	
-	
+
+	public long getId() {
+		return id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public String getPhotoUrl() {
+		return photoUrl;
+	}
 }
