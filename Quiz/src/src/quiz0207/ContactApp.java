@@ -6,16 +6,26 @@ public class ContactApp implements ContactManager{
 
 
     public ContactApp(int contactMaxCount) {
-        // contactCount : contacts 배열에 들어갈 수 있는 최대 연락처 개수
+        // contactCount :최대 연락처 개수
+    	validContactMaxCount(contactMaxCount);
+    	
         this.contacts = new Contact[contactMaxCount];
         this.size = 0;
     }
 
+    private void validContactMaxCount(int contactMaxCount) {
+    	if(contactMaxCount < 0) {
+    		System.out.println("연락처의 개수는 음수일 수 없습니다.");
+    	} 
+	}
+    
     @Override
     public void addNewContact(Contact contact) {
         if (size >= contacts.length) {
             System.out.println("연락처 저장 공간이 없습니다.");
             return;
+        }else if(contact == null) {
+        	System.out.println("연락처가 Null입니다.");
         }
         this.contacts[size++] = contact;
     }

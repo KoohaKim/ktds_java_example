@@ -13,5 +13,9 @@ public class AnimalMain {
 		System.out.println(NumberUtils.getCourseCredit(95)); // 평균 점수 95 -> 학점
 		System.out.println(NumberUtils.getABCDE(4.0)); // 학점->등급
 		
+		
+		
+		
+		
 	}
 }	
