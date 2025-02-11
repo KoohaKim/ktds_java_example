@@ -17,8 +17,7 @@ public class AdditionalContact extends Contact {
 	}
 
 	private void validAdditionalContact(String dateOfBirth, String companyName, String position, String address) {
-		if (dateOfBirth == null || companyName == null || position == null || address == null || 
-				dateOfBirth.isBlank() || companyName.isBlank() || position.isBlank() || address.isBlank()) {
+		if (ParameterUtil.isEmpty(dateOfBirth, companyName, position, address)) {
 			System.out.println("입력값이 null 또는 비어있습니다.");
 		}
 	}

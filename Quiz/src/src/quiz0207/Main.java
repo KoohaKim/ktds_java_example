@@ -9,7 +9,7 @@ public class Main {
 				"서울특별시 관악구 신림로 ");
 		Contact contact3 = new Contact(3, "구돌", "010-5678-5678", "PHOTO.jpg");
 		Contact contact4 = new Contact(4, "구밥", "010-7777-7777", "PHOTO.jpg");
-		Contact contact5 = new Contact(5, "구혁", "010-1212-1212", "PHOTO.jpg");
+		Contact contact5 = new Contact(5, "구혁", "010-1212-1212", "");
 
 		contactApp.addNewContact(contact2);
 		contactApp.addNewContact(contact3);

@@ -21,13 +21,15 @@ public class ContactApp implements ContactManager{
     
     @Override
     public void addNewContact(Contact contact) {
-        if (size >= contacts.length) {
+        if (size >= this.contacts.length) {
             System.out.println("연락처 저장 공간이 없습니다.");
             return;
         }else if(contact == null) {
         	System.out.println("연락처가 Null입니다.");
+        	return;
+        }else if(contact != null){
+        	this.contacts[size++] = contact;
         }
-        this.contacts[size++] = contact;
     }
 
     @Override
@@ -45,10 +47,10 @@ public class ContactApp implements ContactManager{
         Contact temp;
         for (int i = 0; i < size - 1; i++) {
             for (int j = i+1; j < size; j++) {
-                if (contacts[i].getId() > contacts[j].getId()) {
+                if (this.contacts[i].getId() > this.contacts[j].getId()) {
                     temp = contacts[i];
-                    contacts[i] = contacts[j];
-                    contacts[j] = temp;
+                    this.contacts[i] = this.contacts[j];
+                    this.contacts[j] = temp;
                 }
             }
         }

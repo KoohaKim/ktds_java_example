@@ -19,6 +19,7 @@ public class Contact {
 			System.out.println("id는 음수일 수 없습니다.");
 		} else if (name == null || phone == null || photoUrl == null || name.isBlank() || phone.isBlank() || photoUrl.isBlank()) {
 			System.out.println("입력값이 null 또는 비어있습니다.");
+			return;
 		}
 	}
 
@@ -31,15 +32,4 @@ public class Contact {
 		return id;
 	}
 
-	public String getName() {
-		return name;
-	}
-
-	public String getPhone() {
-		return phone;
-	}
-
-	public String getPhotoUrl() {
-		return photoUrl;
-	}
 }
