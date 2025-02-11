@@ -1,5 +1,7 @@
 package quiz0207;
 
+import quiz0207.exceptions.NullContactException;
+
 public class AdditionalContact extends Contact {
 	private String dateOfBirth;
 	private String companyName;
@@ -18,14 +20,14 @@ public class AdditionalContact extends Contact {
 
 	private void validAdditionalContact(String dateOfBirth, String companyName, String position, String address) {
 		if (ParameterUtil.isEmpty(dateOfBirth, companyName, position, address)) {
-			System.out.println("입력값이 null 또는 비어있습니다.");
+			throw new NullContactException("입력 값이 비어있습니다.");
 		}
 	}
 
 	@Override
 	public String toString() {
-		return super.toString() + ", dateOfBirth='" + dateOfBirth + '\'' + ", companyName='" + companyName + '\''
-				+ ", position='" + position + '\'' + ", address='" + address;
+		return super.toString() + ", dateOfBirth='" + this.dateOfBirth + '\'' + ", companyName='" + this.companyName + '\''
+				+ ", position='" + this.position + '\'' + ", address='" + this.address;
 	}
 
 }

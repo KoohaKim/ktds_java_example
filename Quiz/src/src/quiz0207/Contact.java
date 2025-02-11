@@ -1,5 +1,7 @@
 package quiz0207;
 
+import quiz0207.exceptions.NullContactException;
+
 public class Contact {
 	private long id;
 	private String name;
@@ -15,21 +17,20 @@ public class Contact {
 	}
 
 	private void validContact(long id, String name, String phone, String photoUrl) {
-		if (id < 0) {
-			System.out.println("id는 음수일 수 없습니다.");
-		} else if (name == null || phone == null || photoUrl == null || name.isBlank() || phone.isBlank() || photoUrl.isBlank()) {
-			System.out.println("입력값이 null 또는 비어있습니다.");
-			return;
+		if (id <= 0) {
+			System.out.println("id는 0 이하일 수 없습니다.");
+		} else if (ParameterUtil.isEmpty(name, phone, photoUrl)) {
+			throw new NullContactException("입력 값이 비어있습니다.");
 		}
 	}
 
 	@Override
 	public String toString() {
-		return "id=" + id + ", name=" + name + ", phone=" + phone + ", photo=" + photoUrl;
+		return "id=" + this.id + ", name=" + this.name + ", phone=" + this.phone + ", photo=" + this.photoUrl;
 	}
 
 	public long getId() {
-		return id;
+		return this.id;
 	}
 
 }

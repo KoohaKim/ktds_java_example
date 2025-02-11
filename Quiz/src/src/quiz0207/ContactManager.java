@@ -6,4 +6,7 @@ public interface ContactManager {
     Contact getContactAt(int contactIndex);
 
     void sort();
+    
+    void removeContact(int contactIndex);
+    
 }
