@@ -1,4 +1,4 @@
-package Practice;
+package Practice.random_seat;
 
 import java.util.ArrayList;
 import java.util.Collections;
