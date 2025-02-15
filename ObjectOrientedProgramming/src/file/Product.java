@@ -1,4 +1,4 @@
-package file;
+package src.file;
 
 public class Product {
 	private String name;

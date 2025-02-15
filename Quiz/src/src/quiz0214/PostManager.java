@@ -4,13 +4,13 @@ import java.util.List;
 
 public interface PostManager {
 	
-	List<Post> findAllPosts();
+	void findAllPosts();
 	
-	Post findPost(int postId);
+	Post findPostById(int postId);
 	
-	Post createPost(Post post);
+	Post createPost();
 	
-	Post modifyPost(int postId);
+	Post modifyPost();
 	
 	void removePost(int postId);
 	

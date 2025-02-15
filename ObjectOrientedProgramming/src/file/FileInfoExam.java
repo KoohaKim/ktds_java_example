@@ -6,7 +6,8 @@ import java.util.Date;
 public class FileInfoExam {
 	public static void printFileInfo(String directoryPath, String filename) {
 		File file = new File(directoryPath, filename);
-		
+
+
 		System.out.println("파일이 존재 하나요? : " + file.exists());	//파일이 존재하는지 여부 확인 - true
 		System.out.println("파일 객체 인가요? : " + file.isFile());	//파일 객체인지 확인 - true
 		System.out.println("폴더 객체 나요? : " + file.isDirectory());	//폴더 객체인지 확인 - false
