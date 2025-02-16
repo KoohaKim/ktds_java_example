@@ -33,6 +33,10 @@ public class Post {
         return postList;
     }
 
+    public void addComment(Comment comment){
+        comments.add(comment);
+    }
+
 
     public String getTitle() {
         return this.title;

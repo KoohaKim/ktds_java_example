@@ -48,7 +48,9 @@ public class PostRepository {
 
         if (files != null) {
             for (File file : files) {
-                arr.add(loadPostFromFile(file.getName()));
+                if(file.isFile() && file.getName().endsWith(".txt")){
+                    arr.add(loadPostFromFile(file.getName()));
+                }
             }
         }
         return arr;
@@ -66,9 +68,7 @@ public class PostRepository {
         if (!file.exists()) {
             throw new RuntimeException("파일이 존재하지 않습니다. " + FILE_DIRECTORY_PATH);
         }
-        if (!fileName.endsWith(".txt")) {
-            throw new IllegalArgumentException("지원하지 않는 파일 형식입니다: " + fileName);
-        }
+
 
         try {
             List<String> fileLines = Files.readAllLines(file.toPath());
@@ -100,11 +100,18 @@ public class PostRepository {
         Post post = findPostById(idx);
         File file = new File(FILE_DIRECTORY_PATH, post.getTitle() + ".txt");
 
-        if (file.exists()) {
-            if (file.delete()) {
-                posts.remove(idx);
-            }
+        if(!file.exists()){
+            System.out.println("파일이 존재하지 않습니다: " + file.getName());
         }
+
+        if(file.delete()){
+            System.out.println("삭제가 완료되었습니다.");
+            posts.remove(idx);
+        }else{
+            System.out.println("파일 삭제 실패: " + file.getAbsolutePath() + ", " + file.getName());
+        }
+
+
     }
 
 
@@ -112,11 +119,8 @@ public class PostRepository {
         if (idx >= posts.size() || idx < 0) {
             throw new IllegalArgumentException("해당 게시글은 존재하지 않습니다");
         }
-
         return posts.get(idx);
     }
-
-
 
 
     public List<Post> getPosts() {

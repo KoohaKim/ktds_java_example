@@ -1,17 +1,15 @@
 package quiz0214;
 
-import java.util.List;
-
 public interface PostManager {
 	
 	void findAllPosts();
+
+	void findPostById();
+
+	void createPost();
+
+	void modifyPost();
 	
-	Post findPostById(int postId);
-	
-	Post createPost();
-	
-	Post modifyPost();
-	
-	void removePost(int postId);
+	void removePost();
 	
 }
