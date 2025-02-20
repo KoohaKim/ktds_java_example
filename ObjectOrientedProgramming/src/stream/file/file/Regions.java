@@ -1,10 +1,14 @@
 package stream.file.file;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Regions {
     private int id;
     private String name;
     private String wikiDataId;
 
+    private List<Subregion> subregions;	//has a 관계
   
 
     public Regions(String[] region) {
@@ -19,9 +23,20 @@ public class Regions {
         this.id = id;
         this.name = name;
         this.wikiDataId = wikiDataId;
+        this.subregions = new ArrayList<>();
     }
 
-    public int getId() {
+    
+    
+    public List<Subregion> getSubregions() {
+		return this.subregions;
+	}
+
+	public void setSubregions(List<Subregion> subregions) {
+		this.subregions = subregions;
+	}
+
+	public int getId() {
         return this.id;
     }
 
@@ -35,9 +50,12 @@ public class Regions {
 
 	@Override
 	public String toString() {
-		return "Regions [id=" + id + ", name=" + name + ", wikiDataId=" + wikiDataId + "]";
+		return "Regions [id=" + id + ", name=" + name + ", wikiDataId=" + wikiDataId + ", subregions=" + subregions
+				+ "]";
 	}
-    
+
+
+
     
     
 }

@@ -12,6 +12,8 @@ public class City {
     private double latitude;
     private double longitude;
     private String wikiDataId;
+    
+    private States states;
 
     public City(String[] city) {
         this(
@@ -46,7 +48,20 @@ public class City {
         this.wikiDataId = wikiDataId;
     }
 
-    public int getId() {
+    
+    
+    
+    public void setStates(States states) {
+		this.states = states;
+	}
+
+
+	public States getStates() {
+		return states;
+	}
+
+
+	public int getId() {
         return this.id;
     }
 
@@ -91,6 +106,8 @@ public class City {
     }
 
 
+    
+    
 	@Override
 	public String toString() {
 		return "City [id=" + id + ", name=" + name + ", stateId=" + stateId + ", stateCode=" + stateCode

@@ -1,6 +1,9 @@
 package stream.file.file;
 
-public class Countries {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Country {
 	
     private int id;
     private String name;
@@ -25,8 +28,11 @@ public class Countries {
     private String emoji;
     private String emojiU;
 	
+    private Subregion subRegionInfo;
+    private List<States> states;
+    
 	
-	public Countries(String[] countryData) {
+	public Country(String[] countryData) {
 		this(
 	            Integer.parseInt(countryData[0]),  // id
 	            countryData[1],                    // name
@@ -54,7 +60,7 @@ public class Countries {
 	}
 
 
-	public Countries(int id, String name, String iso3, String iso2, 
+	public Country(int id, String name, String iso3, String iso2, 
 					int numericCode, String phoneCode, String capital, String currency, 
 					String currencyName, String currencySymbol, String tld, String nativeName, 
 					String region, int regionId, String subregion, int subregionId, 
@@ -82,6 +88,30 @@ public class Countries {
 		this.longitude = longitude;
 		this.emoji = emoji;
 		this.emojiU = emojiU;
+		this.states = new ArrayList<>();
+	}
+
+
+	
+	
+	
+	public List<States> getStates() {
+		return states;
+	}
+
+
+	public void setStates(List<States> states) {
+		this.states = states;
+	}
+
+
+	public Subregion getSubRegionInfo() {
+		return subRegionInfo;
+	}
+
+
+	public void setSubRegionInfo(Subregion subRegionInfo) {
+		this.subRegionInfo = subRegionInfo;
 	}
 
 
@@ -182,8 +212,11 @@ public class Countries {
 				+ ", nativeName=" + nativeName + ", region=" + region + ", regionId=" + regionId + ", subregion="
 				+ subregion + ", subregionId=" + subregionId + ", nationality=" + nationality + ", timezones="
 				+ timezones + ", latitude=" + latitude + ", longitude=" + longitude + ", emoji=" + emoji + ", emojiU="
-				+ emojiU + "]";
+				+ emojiU + ", subRegionInfo=" + subRegionInfo + "]";
 	}
+
+
+	
 
 	
 	

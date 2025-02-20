@@ -1,5 +1,8 @@
 package stream.file.file;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class States {
 	private int id;
 	private String name;
@@ -11,6 +14,9 @@ public class States {
 	private double latitude;
 	private double longitude;
 
+	private Country countries;
+	private List<City> cities;
+	
 	public States(String[] stateData) {
 		this(
 				Integer.parseInt(stateData[0]),
@@ -37,7 +43,31 @@ public class States {
 		this.type = type;
 		this.latitude = latitude;
 		this.longitude = longitude;
+		this.cities = new ArrayList<>();
 	}
+
+	
+	
+	
+	public Country getCountries() {
+		return countries;
+	}
+
+
+	public void setCountries(Country countries) {
+		this.countries = countries;
+	}
+
+
+	public List<City> getCities() {
+		return cities;
+	}
+
+
+	public void setCities(List<City> cities) {
+		this.cities = cities;
+	}
+
 
 	public int getId() {
 		return this.id;

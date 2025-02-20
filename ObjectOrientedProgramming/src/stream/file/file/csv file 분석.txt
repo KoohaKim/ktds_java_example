@@ -1,0 +1,63 @@
+Has a
+
+> "좌천동"은 어떤 도시(부산)에 어떤 국가(남한)에 어떤 서브대륙(동아시아)에 어떤 대륙(아시아)에 있나? => Asia에 있다.
+> Stream을 통해서 알수 있다!
+> "아시아"에는 어떤 도시 목록을 가지고 있나?
+
+대륙은 서브대륙 목록을 가지고 있다. <=> 서브대륙은 대륙에 포함되어있다.
+서브대륙은 국가목록을 가지고 있다. <=> 국가는 서브대륙에 포함되어있다.
+국가는 "도"목록을 가지고 있다. <=> "도"는 국가에 포함되어있다.
+"도"는 도시 목록을 가지고 있다. <=> 도시는 "도"에 포함되어있다.
+
+regions.csv (대륙정보)
+- id: Region을 구분시킬 고유한 번호
+- name: Region의 이름
+> id가 1번인 region의 이름은 무엇인가? => Africa
+> id가 4번인 region의 이름은 무엇인가? => Europe
+
+subregions.csv (서브대륙정보)
+- id: SubRegion을 구분시킬 고유한 번호
+- name: SubRegion의 이름
+- region_id: SubRegion이 속한 Region의 고유한 번호
+> id가 7번인 SubRegion의 이름은 무엇인가? => Caribbean
+> id가 18번인 SubRegion의 이름은 무엇인가? => Northern Europe
+> region_id가 5번인 SubRegion의 이름들은 무엇인가? => Australia and New Zealand, Melanesia, Micronesia, Polynesia
+> region_id가 5번인 Region의 이름은 무엇인가? => Oceania
+> region의 이름이 'Asia'인 SubRegion의 이름들은 무엇인가?
+        > 'Asia' region의 번호는 무엇인가? => 3
+        > region_id가 3인 SubRegion의 이름들을 알 수 있다
+            - Central Asia
+            - Eastern Asia
+            - South-Eastern Asia
+            - Southern Asia
+            - Western Asia
+
+countries.csv (서브대륙에 포함된 국가정보)
+- id: Country를 구분할 고유한 번호
+- name: Country의 이름
+- region: Country가 속한 대륙의 이름 
+- region_id: Country가 속한 대륙의 고유한 번호
+- subregion: Country가 속한 SubRegion의 이름
+- subregion_id: Country가 속한 SubRegion의 고유한 번호
+> id가 116번인 Country의 이름은 무엇인가? => South Korea
+> id가 116번인 Country의 Region이름은 무엇인가? => Asia
+> id가 116번인 Country의 Region_ID는 무엇인가? => 3
+> id가 116번인 Country의 SubRegion이름은 무엇인가? => Eastern Asia
+> id가 116번인 Country의 SubRegion_ID는 무엇인가? => 12
+
+states.csv (국가에 포함된 도시정보)
+- id: state를 구분할 고유한 번호
+- name: state의 이름
+- country_id: state가 속한 country의 고유한 번호
+- country_name: state가 속한 country의 이름
+> id가 3849번인 state의 이름은 무엇인가? => Seoul
+> id가 3849번인 state의 country_id는 무엇인가? => 116
+> id가 3849번인 state의 country_name은 무엇인가? => South Korea
+> id가 3849번인 state의 subregion_id는 무엇인가? =>
+    > id가 3849번인 state의 country_id는 116번이다.
+        > country의 id가 116번인 subregion_id는 무엇인가? => 12
+            > subregion_id가 12번인 subregion의 이름은 무엇인가? => Eastern Asia
+            > subregion_id가 12번인 region의 번호는 무엇인가? => 3
+                > region의 id 가 3번인 region의 이름은 무엇인가? => Asia
+
+cities.csv
