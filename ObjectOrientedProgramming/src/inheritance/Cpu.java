@@ -10,6 +10,13 @@ public class Cpu {
 	}
 	
 	
+	
+	public Cpu() {
+	
+	}
+
+
+
 	public void calculate() {
 		StringBuffer sBuffer = new StringBuffer();
 		sBuffer.append("제조사: " + this.manufactor + "\n");

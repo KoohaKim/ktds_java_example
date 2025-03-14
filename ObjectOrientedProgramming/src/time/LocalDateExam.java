@@ -48,6 +48,9 @@ public class LocalDateExam {
 		Period targetDay = Period.between(startDay, endDay);
 		System.out.println(targetDay.getYears() + "년 차이, " +  targetDay.getMonths() + "월 차이, " + targetDay.getDays() + "일 차이");
 		
+		int randomNum1 = (int) (Math.random() * 10); // 0~99		
+		System.out.println(randomNum1);
+		
 	}
 	
 }

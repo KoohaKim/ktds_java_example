@@ -12,18 +12,22 @@ public class Human extends Animal{
 
 	@Override
 	public void movement() {
-		System.out.println(this.name + " 가 움직임");
+		// TODO Auto-generated method stub
+		
 	}
 
 	@Override
 	public void breath() {
-		System.out.println(this.age + "세의 호흡");
+		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
 	public void eat() {
-		System.out.println("와그작와그작");
+		// TODO Auto-generated method stub
+		
 	}
+
+
 
 }

@@ -11,6 +11,11 @@ public abstract class Animal {
 	private String place;
 	private boolean haveEgo;
 	
+
+	public Animal() {
+	
+	}
+	
 	public Animal(String place) {
 		this.isLive = true;
 		this.haveEgo = true;

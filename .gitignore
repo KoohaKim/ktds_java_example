@@ -10,3 +10,6 @@ ObjectOrientedProgramming/.gitignore
 Quiz/.gitignore
 0207Quiz/.gitignore
 0204Quiz/.gitignore
+tmdb/lib/ojdbc11.jar
+algorithm/.gitignore
+tmdb/.gitignore
