@@ -32,15 +32,14 @@ public class Combination {
 				if (this.visited[i] == true) {
 					result[index++] = arr[i];
 				}
-					
 
 			this.results.add(result);
 			return;
 
 		} else {
-			for (int i = start; i < arr.length; i++) {
-				this.visited[i] = true;
-				combination(arr, i + 1, radix - 1, combinationCount);
+			for (int i = start; i < arr.length; i++) {					// start = 0;
+				this.visited[i] = true;									// -> {true, false, false}
+				combination(arr, i + 1, radix - 1, combinationCount);	//	-> {1,2,3}, 1, 2, 3
 				this.visited[i] = false;
 			}
 		}
